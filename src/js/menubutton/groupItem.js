@@ -8,7 +8,7 @@
 function mb_create_groupItem(id, data, index) {
     // NOTE: <button 앞에 공백 들어가면 parseHTML 결과로 name, button 이런형태가됨
     var $el = $($.parseHTML([
-        '<button class="btn btn-default" type="button">',
+        '<button class="btn btn-default menu-btn" type="button">',
         data.name,
         '</button>'
     ].join(''))[0])
