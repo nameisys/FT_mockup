@@ -68,13 +68,13 @@ function mb_init() {
     $groupEls[0].trigger('click')
     
 }
-setTimeout(function() {
+$(document).ready(function() {
     if ( !u_is_menubutton() ) return;
 
     mb_init();
-}, 500)
-// $(document).ready(function() {
+});
+// setTimeout(function() {
     // if ( !u_is_menubutton() ) return;
 
     // mb_init();
-// });
+// }, 500)
