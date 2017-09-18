@@ -4388,19 +4388,12 @@ ul.notifications {
   opacity: 1 !important;
   text-align: right;
 }
-.view-first:hover img {
-  transition: initial !important;
-  transform: initial !important;
-}
 #mb-menuview .imgwrap {
   overflow:hidden !important;
 }
 /* submenu */
 #mb-menuview .thumbnail, #mb-menuview .view-first {
   overflow:visible !important;
-}
-#mb-menuview .dropdown-menu > li > a {
-  color:#000 !important;
 }
 
 #dummy-menu {
@@ -4413,6 +4406,7 @@ ul.notifications {
 
 .menu-card {
   float: left;
+  padding-bottom: 20px;
   .card-wrapper {
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
@@ -4420,6 +4414,115 @@ ul.notifications {
 
     border-radius: 0;
     padding: 0;
+    overflow: hidden;
+
+    position: relative;
+    padding: 20px;
+  }
+}
+
+.card-image {
+  text-align: left;
+  position: relative;
+  img {
+    width: 30%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+  }
+}
+
+.card-caption {
+  background-color: #fff;
+  margin-bottom: 20px;
+  font-size: 20px;
+  span {
+    display: block;
+  }
+  text-align: center;
+  .food-name {
+    font-size: 30px;
+  }
+}
+
+.card-tools {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  .tool-btn {
+    display: flex;
+    float: right;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+    background-color: #2A4054;
+    color: #fff;
+    font-size: 16px;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+
+    align-items: center;
+    justify-content: center;
+    
+    span {
+      display: none;
+    }
+    i {
+      display: block;
+    }
+  }
+  .card-context {
+    background-color: #2A4054;
+    position: absolute;
+    top: -220%;
+    right: 16px;
+    border: none;
+    min-width: 84px;
+    display: none;
+    margin: 0;
+    padding: 5px;
+    -webkit-border-radius: 0 20px;
+    -moz-border-radius: 0 20px;
+    border-radius: 0 20px;
+    li {
+      list-style: none;
+      padding: 0;
+      float: right;
+      margin: 2px;
+      text-align: center;
+      a { color: #fff; }
+    }
+    [data-color] {
+      display: block;
+      text-indent: -999999px;
+      overflow: hidden;
+      width: 20px;
+      height: 20px;
+      padding: 0;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      border-radius: 50%;
+    }
+    [data-color=red]{
+      background-color: #EB918A;
+    }
+    [data-color=green] {
+      background-color: #9BB78E;
+    }
+    [data-color=blue] {
+      background-color: #81b2d0;
+    }
+    [data-type] {
+      float: none;
+    }
+  }
+  .command {
+    top: -150%;
   }
 }
 
@@ -4464,4 +4567,47 @@ ul.notifications {
     z-index: 2;
     background-color: #fff;
   }
+}
+
+/** clearfix **/
+.clear:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+
+@media only screen and (max-width : 992px) {
+
+  .card-caption {
+    font-size: 18px;
+    .food-name {
+      font-size: 28px;
+    }
+  }
+  .card-tools {
+    position: static;
+    .tool-btn {
+      text-indent: 0;
+      border-radius: 5px;
+      span {
+        display: block;
+      }
+      i {
+        display: none;
+      }
+    }
+
+  }
+
+}
+
+@media only screen and (max-width : 768px) {
+
+  .card-caption {
+    .food-name {
+      font-size: 24px;
+    }
+  }
+
 }

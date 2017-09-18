@@ -33,15 +33,15 @@ function mb_menuitem_update_color($el, color) {
 }
 
 function mb_menuitem_update_text($el, data) {
-    var $lines = $el.find('.caption p')
+    var $lines = $el.find('.food-info')
 
     if (data.name) {
-        var $name_span = $lines.first().find('span')
+        var $name_span = $lines.first()
         $name_span.text(data.name)
     }
 
     if (data.price) {
-        var $price_span = $lines.last().find('span')
-        $price_span.text(data.price)
+        var $price_span = $lines.last()
+        $price_span.text(data.price+"원")
     }
 }

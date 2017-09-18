@@ -165,32 +165,42 @@
 
                     <div id="dummy-menu" style="display:none">
                         <!-- a menu -->
-                        <div class="menu-card col-md-3 col-xs-6">
+                        <div class="menu-card col-lg-3 col-md-4 col-xs-6">
                             <div class="card-wrapper">
-                                <div class="image view view-first">
-                                    <img src="http://lorempixel.com/400/200/food/" alt="image">
-                                    <div class="tools dropdown">
-                                        <a href="#"><i class="fa fa-link"></i></a>
+                                <div class="card-caption">
+                                    <span class="food-info food-name"><!--메뉴 이름--></span>
+                                    <span class="food-info food-cost"><!--메뉴 가격--></span>
+                                </div>
+                                <div class="card-image">
+                                    <img src="http://lorempixel.com/300/300/food/" alt="image">
+                                    <div class="tools dropdown card-tools clear">
+                                        <a href="#" class="tool-btn color-tool">
+                                            <i class="fa fa-tint"></i>
+                                            <span>색상</span>
+                                        </a>
                                         <!-- color menu -->
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">red</a></li>
-                                            <li><a href="#">green</a></li>
-                                            <li><a href="#">blue</a></li>
+                                        <ul class="card-context clear">
+                                            <li><a href="#" data-color="red">red</a></li>
+                                            <li><a href="#" data-color="green">green</a></li>
+                                            <li><a href="#" data-color="blue">blue</a></li>
+                                            <li><a href="#" data-color="red">red</a></li>
+                                            <li><a href="#" data-color="green">green</a></li>
+                                            <li><a href="#" data-color="blue">blue</a></li>
+                                            <li><a href="#" data-color="red">red</a></li>
+                                            <li><a href="#" data-color="green">green</a></li>
+                                            <li><a href="#" data-color="blue">blue</a></li>
                                         </ul>
 
-                                        <a href="#"><i class="fa fa-pencil"></i></a>
+                                        <a href="#" class="tool-btn modify-tool">
+                                            <i class="fa fa-pencil"></i>
+                                            <span>설정</span>
+                                        </a>
                                         <!-- sub menu -->
-                                        <ul class="dropdown-menu command">
+                                        <ul class="card-context command">
                                             <li data-type="update"><a href="#">수정</a></li>
                                             <li data-type="delete"><a href="#">삭제</a></li>
                                         </ul>
                                     </div>
-                                </div>
-                                <div class="caption">
-                                    <p> <span class="right ">치킨</span></p>
-                                    <div class="clearfix"></div>
-                                    <p> <span class="right">10,000원</span></p>
-                                    <div class="clearfix"></div>
                                 </div>
                             </div>
                         </div>
@@ -198,26 +208,12 @@
                         <!-- empty menu -->
                         <div class="menu-card col-md-3 col-xs-6" data-type="empty">
                             <div class="card-wrapper">
-                                <div class="view view-first">
-                                    <div class="tools dropdown">
-                                        <a href="#"><i class="fa fa-link"></i></a>
-                                        <!-- color menu -->
-                                        <ul class="dropdown-menu">
-                                            <li><a href="#">red</a></li>
-                                            <li><a href="#">green</a></li>
-                                            <li><a href="#">blue</a></li>
-                                        </ul>
-
-                                        <a href="#"><i class="fa fa-pencil"></i></a>
-                                        <!-- sub menu -->
-                                        <ul class="dropdown-menu">
-                                            <li data-type="add"><a href="#">추가</a></li>
-                                            <li data-type="delete"><a href="#">삭제</a></li>
-                                        </ul>
-                                    </div>
+                                <div class="card-caption">
+                                    <span class="food-info food-name">&nbsp;</span>
+                                    <span class="food-info food-cost">&nbsp;</span>
                                 </div>
-
-                                <div class="caption">
+                                <div class="card-image">
+                                    <img src="https://dummyimage.com/300x300/#eee/ededed.png&text=No+Item">
                                 </div>
                             </div>
                         </div>
