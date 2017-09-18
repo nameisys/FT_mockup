@@ -79,7 +79,7 @@ function mb_submenu(inst) {
     $color_dropdown.find('li').on('click', function (e) {
         e.preventDefault()
 
-        var color_str = $(this).find('a').text()
+        var color_str = $(this).find('a').css('backgroundColor')
         mb_menuitem_update_color(inst.$el, color_str)
 
         // 후처리

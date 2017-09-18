@@ -28,7 +28,7 @@ function mb_create_empty$menu(id, data) {
 }
 
 function mb_menuitem_update_color($el, color) {
-    var $color_target = $el.find('.caption')
+    var $color_target = $el.find('.card-wrapper')
     $color_target.css('background-color', color)
 }
 
