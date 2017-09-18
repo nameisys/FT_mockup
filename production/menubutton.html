@@ -31,35 +31,55 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+                    <a href="dashboard.html" class="site_title"><i class="fa fa-cogs"></i> <span>FoodTech POS</span></a>
                 </div>
 
                 <div class="clearfix"></div>
-
-                <!-- menu profile quick info -->
-                <div class="profile clearfix">
-                    <div class="profile_pic">
-                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-                    </div>
-                    <div class="profile_info">
-                        <span>Welcome,</span>
-                        <h2>John Doe</h2>
-                    </div>
-                </div>
-                <!-- /menu profile quick info -->
 
                 <br />
 
                 <!-- sidebar menu -->
                 <div id="sidebar-menu" class="main_menu_side hidden-print main_menu">
                     <div class="menu_section">
-                        <h3>genel</h3>
+                        <h3>General</h3>
                         <ul class="nav side-menu">
-                            <li><a href="/production/index.html"><i class="fa fa-laptop"></i>시간대실적확인?</a></li>
-                            <li><a href="/production/menubutton.html"><i class="fa fa-laptop"></i>메뉴버튼관리?</a></li>
+                            <li><a><i class="fa fa-home"></i> 업장관리 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="#">기본 정보</a></li>
+                                    <li><a href="#">코드 정보</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-edit"></i> 메뉴관리 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="#">브랜드 메뉴</a></li>
+                                    <li><a href="#">매장 메뉴</a></li>
+                                    <li><a href="menubutton.html">매장 버튼</a></li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-sitemap"></i> 실적조회 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a>판매 속보<span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu">
+                                            <li class="sub_menu"><a href="dashboard.html">시간대</a>
+                                            </li>
+                                            <li><a href="#">영수증</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">판매 분석</a>
+                                    </li>
+                                    <li><a href="#">판매 집계</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a><i class="fa fa-table"></i> 시스템 관리 <span class="fa fa-chevron-down"></span></a>
+                                <ul class="nav child_menu">
+                                    <li><a href="#">통합 관리</a></li>
+                                    <li><a href="#">화면 관리</a></li>
+                                </ul>
+                            </li>
                         </ul>
                     </div>
-
                 </div>
                 <!-- /sidebar menu -->
             </div>
@@ -145,10 +165,10 @@
 
                     <div id="dummy-menu" style="display:none">
                         <!-- a menu -->
-                        <div class="col-md-3 col-xs-6">
-                            <div class="thumbnail">
+                        <div class="menu-card col-md-3 col-xs-6">
+                            <div class="card-wrapper">
                                 <div class="image view view-first">
-                                    <img style="width: 100%; display: block;"  alt="image">
+                                    <img src="http://lorempixel.com/400/200/food/" alt="image">
                                     <div class="tools dropdown">
                                         <a href="#"><i class="fa fa-link"></i></a>
                                         <!-- color menu -->
@@ -176,8 +196,8 @@
                         </div>
 
                         <!-- empty menu -->
-                        <div class="col-md-3 col-xs-6" data-type="empty">
-                            <div class="thumbnail">
+                        <div class="menu-card col-md-3 col-xs-6" data-type="empty">
+                            <div class="card-wrapper">
                                 <div class="view view-first">
                                     <div class="tools dropdown">
                                         <a href="#"><i class="fa fa-link"></i></a>
@@ -214,6 +234,12 @@
     <!-- /page content -->
 </div>
 </div>
+
+<!-- Modal -->
+<div class="custom-modal">
+    <div class="modal-layer"></div>
+</div>
+<!-- /Modal -->
 
 
 <!-- jQuery -->
