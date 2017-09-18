@@ -223,15 +223,19 @@ $(document).ready(function() {
     var echartDonut1 = echarts.init(document.getElementById('echart_donut1'), theme);
 
     echartDonut1.setOption({
+        color: [
+            '#097A83', '#2AA876', '#FFD265', '#F19C65',
+            '#CE4D45', '#999999'
+        ],
       tooltip: {
         trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+        formatter: "{b} : {c}원 ({d}%)"
       },
       calculable: true,
       legend: {
         x: 'center',
         y: 'bottom',
-        data: ['국물떡볶이(R)', '닭볶이', '부대떡볶이(R)', '걸작순살치킨', '쿨피스(대)']
+        data: ['국물떡볶이(R)', '닭볶이', '부대떡볶이(R)', '걸작순살치킨', '쿨피스(대)', '기타']
       },
       toolbox: {
         show: true,
@@ -296,6 +300,9 @@ $(document).ready(function() {
         }, {
           value: 230500,
           name: '쿨피스(대)'
+        }, {
+          value: 500000,
+          name: '기타'
         }]
       }]
     });
@@ -308,15 +315,19 @@ $(document).ready(function() {
     var echartDonut2 = echarts.init(document.getElementById('echart_donut2'), theme);
 
     echartDonut2.setOption({
+        color: [
+            '#097A83', '#2AA876', '#FFD265', '#F19C65',
+            '#CE4D45', '#999999'
+        ],
       tooltip: {
         trigger: 'item',
-        formatter: "{a} <br/>{b} : {c} ({d}%)"
+        formatter: "{b} : {c}건 ({d}%)"
       },
       calculable: true,
       legend: {
         x: 'center',
         y: 'bottom',
-        data: ['국물떡볶이(R)', '닭볶이', '부대떡볶이(R)', '걸작순살치킨', '쿨피스(대)']
+        data: ['국물떡볶이(R)', '닭볶이', '부대떡볶이(R)', '걸작순살치킨', '쿨피스(대)', '기타']
       },
       toolbox: {
         show: true,
@@ -381,6 +392,9 @@ $(document).ready(function() {
         }, {
           value: 157,
           name: '쿨피스(대)'
+        }, {
+          value: 400,
+          name: '기타'
         }]
       }]
     });
@@ -885,7 +899,7 @@ $(document).ready(function() {
       },
       calculable: true,
       xAxis: {
-        name: '시간',
+        name: '',
         type: 'category',
         boundaryGap: false,
         data: [
@@ -982,7 +996,7 @@ $(document).ready(function() {
           return [
             hours[data[0]],
             days[data[1]],
-            data[2]
+            data[2] + '원'
           ].join(' ')
         }
       },
@@ -1047,7 +1061,7 @@ $(document).ready(function() {
     hours.forEach(function (hour, hourI) {
       days.forEach(function (day, dayI) {
         data.push([
-          hourI, dayI, u_random_int(0, 10000000)
+          hourI, dayI, u_random_int(0, 10000)
         ])
       })
     })
@@ -1062,7 +1076,7 @@ $(document).ready(function() {
           return [
             hours[data[0]],
             days[data[1]],
-            data[2]
+            data[2] + '건'
           ].join(' ')
         }
       },
@@ -1081,7 +1095,7 @@ $(document).ready(function() {
       },
       visualMap: {
         min: 0,
-        max: 10000000,
+        max: 10000,
         calculable: true,
         orient: 'horizontal',
         left: 'center',
