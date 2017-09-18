@@ -46,7 +46,7 @@ gulp.task('browser-sync', function() {
         server: {
             baseDir: './'
         },
-        startPath: './production/customize-index.html',
+        startPath: './production/dashboard.html',
         open: false
     });
 });
