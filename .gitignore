@@ -5,6 +5,7 @@ node_modules
 vendors
 build
 build-origin
+build_result
 documentation
 
 .idea/**/workspace.xml
