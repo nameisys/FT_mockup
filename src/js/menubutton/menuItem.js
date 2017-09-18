@@ -31,7 +31,9 @@ function mb_create_menuItem(id, data, index) {
 
 // 마지막것이 emptyitem이 아니면 생성해줌
 function mb_menuitem_append_emptyitem_if_last_is_not_emptyitem() {
-    console.log('ww')
+    // NOTE: 현재 빈것사용안함
+    return;
+
     var $mb_menuview = $('#mb-menuview')
     var $menuitems = $mb_menuview.children()
 
