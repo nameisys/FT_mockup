@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/production/e_commerce.html" />
+    <file url="file://$PROJECT_DIR$/production/echarts.html" />
+    <file url="file://$PROJECT_DIR$/production/fixed_footer.html" />
+    <file url="file://$PROJECT_DIR$/production/fixed_sidebar.html" />
+    <file url="file://$PROJECT_DIR$/production/form.html" />
+    <file url="file://$PROJECT_DIR$/production/form_advanced.html" />
+    <file url="file://$PROJECT_DIR$/production/form_buttons.html" />
+    <file url="file://$PROJECT_DIR$/production/form_upload.html" />
+    <file url="file://$PROJECT_DIR$/production/form_validation.html" />
+    <file url="file://$PROJECT_DIR$/production/form_wizards.html" />
+    <file url="file://$PROJECT_DIR$/production/general_elements.html" />
+    <file url="file://$PROJECT_DIR$/production/glyphicons.html" />
+    <file url="file://$PROJECT_DIR$/production/icons.html" />
+    <file url="file://$PROJECT_DIR$/production/inbox.html" />
+    <file url="file://$PROJECT_DIR$/production/index.html" />
+    <file url="file://$PROJECT_DIR$/production/index2.html" />
+    <file url="file://$PROJECT_DIR$/production/index3.html" />
+    <file url="file://$PROJECT_DIR$/production/invoice.html" />
+    <file url="file://$PROJECT_DIR$/production/level2.html" />
+    <file url="file://$PROJECT_DIR$/production/login.html" />
+    <file url="file://$PROJECT_DIR$/production/map.html" />
+    <file url="file://$PROJECT_DIR$/production/media_gallery.html" />
+    <file url="file://$PROJECT_DIR$/production/morisjs.html" />
+    <file url="file://$PROJECT_DIR$/production/other_charts.html" />
+    <file url="file://$PROJECT_DIR$/production/page_403.html" />
+    <file url="file://$PROJECT_DIR$/production/page_404.html" />
+    <file url="file://$PROJECT_DIR$/production/page_500.html" />
+    <file url="file://$PROJECT_DIR$/production/plain_page.html" />
+    <file url="file://$PROJECT_DIR$/production/pricing_tables.html" />
+    <file url="file://$PROJECT_DIR$/production/profile.html" />
+    <file url="file://$PROJECT_DIR$/production/project_detail.html" />
+    <file url="file://$PROJECT_DIR$/production/projects.html" />
+    <file url="file://$PROJECT_DIR$/production/tables.html" />
+    <file url="file://$PROJECT_DIR$/production/tables_dynamic.html" />
+    <file url="file://$PROJECT_DIR$/production/typography.html" />
+    <file url="file://$PROJECT_DIR$/production/widgets.html" />
+    <file url="file://$PROJECT_DIR$/production/xx.html" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+</project>
