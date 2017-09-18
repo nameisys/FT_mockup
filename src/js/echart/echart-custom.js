@@ -447,7 +447,10 @@ $(document).ready(function() {
       },
       yAxis: {
         name: '매출',
-        type: 'value'
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}원'
+        }
       },
       series: [
         {
@@ -576,7 +579,10 @@ $(document).ready(function() {
       },
       yAxis: {
         name: '주문 건수',
-        type: 'value'
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}건'
+        }
       },
       series: [
         {
@@ -670,7 +676,10 @@ $(document).ready(function() {
       }],
       yAxis: [{
         name: '매출',
-        type: 'value'
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}원'
+        }
       }],
       series: [{
         name: '최대 매출',
@@ -712,7 +721,10 @@ $(document).ready(function() {
       }],
       yAxis: [{
         name: '주문 건수',
-        type: 'value'
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}건'
+        }
       }],
       series: [{
         name: '최대 매출',
@@ -754,7 +766,10 @@ $(document).ready(function() {
       },
       yAxis: [{
         name: '매출',
-        type: 'value'
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}원'
+        }
       }],
       series: [{
         name: '최대 매출',
@@ -805,7 +820,10 @@ $(document).ready(function() {
       },
       yAxis: [{
         name: '주문 건수',
-        type: 'value'
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}건'
+        }
       }],
       series: [{
         name: '최대 매출',
@@ -877,12 +895,18 @@ $(document).ready(function() {
       },
       yAxis: [
         {
-          name: '매출',
-          type: 'value'
+            name: '매출',
+            type: 'value',
+            axisLabel: {
+                formatter: '{value}원'
+            }
         },
         {
           name: '주문 건수',
-          type: 'value'
+          type: 'value',
+            axisLabel: {
+                formatter: '{value}건'
+            }
         }
       ],
       series: [
