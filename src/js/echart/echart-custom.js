@@ -675,23 +675,11 @@ $(document).ready(function() {
       series: [{
         name: '최대 매출',
         type: 'bar',
-        data: [223000, 183000, 192500, 180000, 94000, 214000, 123000],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [223000, 183000, 192500, 180000, 94000, 214000, 123000]
       }, {
         name: '최소 매출',
         type: 'bar',
-        data: [13000, 13500, 20500, 24000, 20000, 24000, 20000],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [13000, 13500, 20500, 24000, 20000, 24000, 20000]
       }]
     });
 
@@ -729,23 +717,11 @@ $(document).ready(function() {
       series: [{
         name: '최대 매출',
         type: 'bar',
-        data: [8, 5, 6, 5, 4, 6, 4],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [8, 5, 6, 5, 4, 6, 4]
       }, {
         name: '최소 매출',
         type: 'bar',
-        data: [3, 1, 1, 1, 1, 1, 1],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [3, 1, 1, 1, 1, 1, 1]
       }]
     });
 
@@ -767,12 +743,15 @@ $(document).ready(function() {
         show: false
       },
       calculable: false,
-      xAxis: [{
-        name: '요일',
+      xAxis: {
+        name: '시간',
         type: 'category',
-        splitNumber: 7,
-        data: ['월', '화', '수', '목', '금', '토', '일']
-      }],
+        boundaryGap: true,
+        data: [
+          '00:00','02:00','04:00','06:00','08:00','10:00','12:00',
+          '14:00','16:00','18:00','20:00','22:00','24:00'
+        ]
+      },
       yAxis: [{
         name: '매출',
         type: 'value'
@@ -780,23 +759,17 @@ $(document).ready(function() {
       series: [{
         name: '최대 매출',
         type: 'bar',
-        data: [223000, 183000, 192500, 180000, 94000, 214000, 123000],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [
+            223000, 183000, 192500, 180000, 94000, 214000,
+            223000, 183000, 192500, 180000, 94000, 214000
+        ]
       }, {
         name: '최소 매출',
         type: 'bar',
-        data: [13000, 13500, 20500, 24000, 20000, 24000, 20000],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [
+            13000, 13500, 20500, 24000, 20000, 24000,
+            13000, 13500, 20500, 24000, 20000, 24000
+        ]
       }]
     });
 
@@ -821,12 +794,15 @@ $(document).ready(function() {
         show: false
       },
       calculable: false,
-      xAxis: [{
-        name: '요일',
+      xAxis: {
+        name: '시간',
         type: 'category',
-        splitNumber: 7,
-        data: ['월', '화', '수', '목', '금', '토', '일']
-      }],
+        boundaryGap: true,
+        data: [
+          '00:00','02:00','04:00','06:00','08:00','10:00','12:00',
+          '14:00','16:00','18:00','20:00','22:00','24:00'
+        ]
+      },
       yAxis: [{
         name: '주문 건수',
         type: 'value'
@@ -834,23 +810,11 @@ $(document).ready(function() {
       series: [{
         name: '최대 매출',
         type: 'bar',
-        data: [8, 5, 6, 5, 4, 6, 4],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [8, 5, 6, 5, 4, 6, 8, 5, 6, 5, 4, 6]
       }, {
         name: '최소 매출',
         type: 'bar',
-        data: [3, 1, 1, 1, 1, 1, 1],
-        markLine: {
-          data: [{
-            type: 'average',
-            name: '???'
-          }]
-        }
+        data: [3, 1, 1, 1, 1, 1, 3, 1, 1, 1, 1, 2 ]
       }]
     });
 
@@ -935,7 +899,7 @@ $(document).ready(function() {
           },
           data:[
             0, 0, 0, 0, 0, 266500, 431000,
-            567000, 554500, 576000, 1140500, 304000, 245500
+            567000, 554500, 576000, 1140500, 304000
           ]
         },
         {
@@ -952,7 +916,7 @@ $(document).ready(function() {
           },
           data:[
             0, 0, 0, 0, 0, 11, 17,
-            18, 20, 21, 33, 20, 11
+            18, 20, 21, 33, 20
           ]
         }
       ]
