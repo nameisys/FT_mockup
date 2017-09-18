@@ -229,7 +229,11 @@ $(document).ready(function() {
         ],
       tooltip: {
         trigger: 'item',
-        formatter: "{b} : {c}원 ({d}%)"
+        formatter: function (params, ticket, callback) {
+            var data = params.data
+            var percent = '(' + params.percent + '%)'
+            return data.name + ': ' + u_setComma(data.value) + '원 ' + percent
+        }
       },
       calculable: true,
       legend: {
@@ -321,7 +325,11 @@ $(document).ready(function() {
         ],
       tooltip: {
         trigger: 'item',
-        formatter: "{b} : {c}건 ({d}%)"
+        formatter: function (params, ticket, callback) {
+            var data = params.data
+            var percent = '(' + params.percent + '%)'
+            return data.name + ': ' + u_setComma(data.value) + '건 ' + percent
+        }
       },
       calculable: true,
       legend: {
@@ -411,7 +419,24 @@ $(document).ready(function() {
         '#324D5C', '#46B29D', '#F0CA4D', '#E37B40', '#DE5B49'
       ],
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+            var rs = ''
+            params.forEach(function (v, i) {
+                if ( i == 0 ) {
+                    var time = v.name
+                    rs += time
+                    rs += '<br>'
+                }
+                var color = v.color
+                var name = v.seriesName
+                var value = v.data
+                rs += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + color + '"></span>'
+                rs+= ' ' + name + ' : ' + u_setComma(value) + '원'
+                rs += '<br>'
+            })
+            return rs
+        }
       },
       legend: {
         data:['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
@@ -544,7 +569,24 @@ $(document).ready(function() {
         '#324D5C', '#46B29D', '#F0CA4D', '#E37B40', '#DE5B49'
       ],
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+            var rs = ''
+            params.forEach(function (v, i) {
+                if ( i == 0 ) {
+                    var time = v.name
+                    rs += time
+                    rs += '<br>'
+                }
+                var color = v.color
+                var name = v.seriesName
+                var value = v.data
+                rs += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + color + '"></span>'
+                rs+= ' ' + name + ' : ' + u_setComma(value) + '건'
+                rs += '<br>'
+            })
+            return rs
+        }
       },
       legend: {
         data:['월요일','화요일','수요일','목요일','금요일','토요일','일요일'],
@@ -673,7 +715,24 @@ $(document).ready(function() {
 
     echartBarDay1.setOption({
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+            var rs = ''
+            params.forEach(function (v, i) {
+                if ( i == 0 ) {
+                    var time = v.name
+                    rs += time
+                    rs += '<br>'
+                }
+                var color = v.color
+                var name = v.seriesName
+                var value = v.data
+                rs += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + color + '"></span>'
+                rs+= ' ' + name + ' : ' + u_setComma(value) + '원'
+                rs += '<br>'
+            })
+            return rs
+        }
       },
       legend: {
         data: ['Maximum', 'Minimum']
@@ -718,7 +777,25 @@ $(document).ready(function() {
         '#FFD265', '#F19C65'
       ],
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+            var rs = ''
+            params.forEach(function (v, i) {
+                if ( i == 0 ) {
+                    var time = v.name
+                    rs += time
+                    rs += '<br>'
+                }
+                var color = v.color
+                var name = v.seriesName
+                var value = v.data
+                rs += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + color + '"></span>'
+                rs+= ' ' + name + ' : ' + u_setComma(value) + '건'
+                rs += '<br>'
+            })
+            console.log(params)
+            return rs
+        }
       },
       legend: {
         data: ['Maximum', 'Minimum']
@@ -760,7 +837,25 @@ $(document).ready(function() {
 
     echartBarTime1.setOption({
       tooltip: {
-        trigger: 'axis'
+       trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+            var rs = ''
+            params.forEach(function (v, i) {
+                if ( i == 0 ) {
+                    var time = v.name
+                    rs += time
+                    rs += '<br>'
+                }
+                var color = v.color
+                var name = v.seriesName
+                var value = v.data
+                rs += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + color + '"></span>'
+                rs+= ' ' + name + ' : ' + u_setComma(value) + '원'
+                rs += '<br>'
+            })
+            console.log(params)
+            return rs
+        }
       },
       legend: {
         data: ['Maximum', 'Minimum']
@@ -814,7 +909,25 @@ $(document).ready(function() {
         '#FFD265', '#F19C65'
       ],
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+            var rs = ''
+            params.forEach(function (v, i) {
+                if ( i == 0 ) {
+                    var time = v.name
+                    rs += time
+                    rs += '<br>'
+                }
+                var color = v.color
+                var name = v.seriesName
+                var value = v.data
+                rs += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + color + '"></span>'
+                rs+= ' ' + name + ' : ' + u_setComma(value) + '건'
+                rs += '<br>'
+            })
+            console.log(params)
+            return rs
+        }
       },
       legend: {
         data: ['Maximum', 'Minimum']
@@ -862,7 +975,29 @@ $(document).ready(function() {
         '#417378', '#FFD265'
       ],
       tooltip: {
-        trigger: 'axis'
+        trigger: 'axis',
+        formatter: function (params, ticket, callback) {
+            var rs = ''
+            params.forEach(function (v, i) {
+                if ( i == 0 ) {
+                    var time = v.name
+                    rs += time
+                    rs += '<br>'
+                }
+                var color = v.color
+                var name = v.seriesName
+                var value = v.data
+                rs += '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:9px;height:9px;background-color:' + color + '"></span>'
+                if ( i == 0 ) {
+                    rs+= ' ' + name + ' : ' + u_setComma(value) + '원'
+                } else {
+                    rs+= ' ' + name + ' : ' + u_setComma(value) + '건'
+                }
+                rs += '<br>'
+            })
+            console.log(params)
+            return rs
+        }
       },
       legend: {
         data:['매출','주문 건수'],
@@ -996,7 +1131,8 @@ $(document).ready(function() {
           return [
             hours[data[0]],
             days[data[1]],
-            data[2] + '원'
+            u_setComma(data[2]) + '원'
+
           ].join(' ')
         }
       },
@@ -1022,6 +1158,9 @@ $(document).ready(function() {
         bottom: '15%',
         inRange: {
           color: ['#A4CEBE', '#417378']
+        },
+        formatter: function(v) {
+            return u_setComma(v) + '원'
         }
       },
       series: [{
@@ -1076,7 +1215,7 @@ $(document).ready(function() {
           return [
             hours[data[0]],
             days[data[1]],
-            data[2] + '건'
+            u_setComma(data[2]) + '건'
           ].join(' ')
         }
       },
@@ -1102,6 +1241,9 @@ $(document).ready(function() {
         bottom: '15%',
         inRange: {
           color: ['#F1E0BD', '#F19C65']
+        },
+        formatter: function(v) {
+            return u_setComma(v) + '건'
         }
       },
       series: [{
@@ -1154,4 +1296,22 @@ function u_range(i, max) {
 
 function u_random_int(min, max) {
   return  Math.floor(Math.random() * (max - min + 1) + min);
+}
+
+function u_setComma (number) {
+    // 정규표현식 : (+- 존재하거나 존재 안함, 숫자가 1개 이상), (숫자가 3개씩 반복)
+    var reg = /(^[+-]?\d+)(\d{3})/;
+
+    // 스트링변환
+    number += '';
+    while (reg.test(number)) {
+        // replace 정규표현식으로 3자리씩 콤마 처리
+        number = number.replace(reg,'$1'+','+'$2');
+    }
+
+    var dotI = number.lastIndexOf('.')
+    if ( dotI != -1 ) {
+        number = number.slice(0, dotI)
+    }
+    return number;
 }

@@ -105,8 +105,8 @@ function mb_submenu(inst) {
 
         // TODO popup
         var data = {
-            name: 'updatename',
-            price: 'updaetprice'
+            name: '부타야끼동',
+            price: '7000'
         }
         mb_menuitem_update_text(inst.$el, data)
 
