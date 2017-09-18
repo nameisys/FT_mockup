@@ -4,7 +4,10 @@ node_modules
 .sass-cache
 vendors
 build
+build-origin
+documentation
 
+.idea
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/dictionaries
